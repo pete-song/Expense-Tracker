@@ -3,8 +3,8 @@ import React from 'react'
 
 function BudgetItem({budget}) {
     const calculateProgressPerc = () => {
-        // ( totalSpend / amount ) * 100
-        const perc = (budget.totalSpend / budget.amount) * 100;
+        // ( totalSpent / amount ) * 100
+        const perc = (budget.totalSpent / budget.amount) * 100;
         return Math.min(perc, 100).toFixed(2);
     }
 
@@ -20,13 +20,13 @@ function BudgetItem({budget}) {
                         </div>
                         
                     </div>
-                    <h2 className='font-bold text-[var(--primary)] text-lg'>${budget.amount}</h2>
+                    <h2 className='font-bold text-[var(--primary)] text-lg'>฿{budget.amount}</h2>
                 </div>
 
                 <div className='mt-5'>
                     <div className='flex items-center justify-between mb-3'>
-                        <h2 className='text-sx text-slate-400'>${budget.totalSpend ? budget.totalSpend : 0} Spent</h2>
-                        <h2 className='text-sx text-slate-400'>${budget.amount - budget.totalSpend} Remaining</h2>
+                        <h2 className='text-sx text-slate-400'>฿{budget.totalSpent ? budget.totalSpent : 0} Spent</h2>
+                        <h2 className='text-sx text-slate-400'>฿{budget.amount - budget.totalSpent} Remaining</h2>
                     </div>
                     <div className='w-full bg-slate-300 h-2 rounded-full'>
                         <div 
