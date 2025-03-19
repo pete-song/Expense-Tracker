@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1742208892033,
+      "tag": "0000_hesitant_the_renegades",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1742249768876,
+      "tag": "0001_spicy_stature",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1742309255283,
+      "tag": "0002_robust_the_leader",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+ALTER TABLE "Expenses" RENAME COLUMN "createdBy" TO "createdAt";
