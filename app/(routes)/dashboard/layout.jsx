@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import SideNav from './_components/SideNav'
 import DashboardHeader from './_components/DashboardHeader'
 import { db } from '@/utils/dbConfig'
@@ -29,15 +29,16 @@ function DashboardLayout({children}) {
         }
     }
 
+    const [openSideNav, setOpenSideNav] = useState(true);
+
     return (
-        <div>
-            <div className='fixed md:w-64 hidden md:block'>
-                
-                <SideNav/>
-            </div>
-            <div className='md:ml-64'>
-                <DashboardHeader/>
+        <div className="flex h-screen">
+            <div className={`flex-1 transition-all duration-300 ${openSideNav ? 'md:w-[calc(100%-16rem)]' : 'w-full'}`}>
+                <DashboardHeader setOpenSideNav={setOpenSideNav} />
                 {children}
+            </div>
+            <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-md transform transition-transform duration-300 ${openSideNav ? 'translate-x-0' : 'translate-x-full'}`}>
+                <SideNav openSideNav={openSideNav} setOpenSideNav={setOpenSideNav} />
             </div>
         </div>
     )

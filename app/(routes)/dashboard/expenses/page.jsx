@@ -51,7 +51,7 @@ function page() {
     }
 
     return (
-        <div className='p-5'>
+        <div className='p-10'>
             <h2 className='font-bold text-3xl'>My Expenses</h2>
             <ExpenseListTable expensesList={expensesList} refreshData={() => getBudgetList()}/>
         </div>

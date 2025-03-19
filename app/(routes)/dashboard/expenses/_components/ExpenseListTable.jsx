@@ -26,14 +26,14 @@ function ExpenseListTable({expensesList, refreshData}) {
                 <h2 className='font-bold'>Name</h2>
                 <h2 className='font-bold'>Amount</h2>
                 <h2 className='font-bold'>Date</h2>
-                <h2 className='font-bold'>Action</h2>
+                <h2 className='font-bold text-right'>Action</h2>
             </div>
             {expensesList.map((expenses, index) => (
                 <div key={index} className='grid grid-cols-4 bg-slate-50 p-2'>
                     <h2>{expenses.name}</h2>
                     <h2>฿{expenses.amount}</h2>
                     <h2>{expenses.createdAt}</h2>
-                    <h2>
+                    <h2 className='flex justify-end'>
                         <Trash 
                             className='text-red-600 cursor-pointer' 
                             onClick={() => deleteExpense(expenses)}
